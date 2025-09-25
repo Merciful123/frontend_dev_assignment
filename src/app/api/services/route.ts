@@ -2,15 +2,20 @@ import { NextRequest, NextResponse } from 'next/server'
 import workersData from '../../../../workers.json'
 
 // GET /api/services
+
 export async function GET(request: NextRequest) {
   try {
-    // Simulate API delay
+
+    // Simulating API delay
+
     await new Promise(resolve => setTimeout(resolve, 50 + Math.random() * 100))
 
-    // Extract unique services from workers data
+    // Extracting unique services from workers data
+
     const services = Array.from(new Set(workersData.map(worker => worker.service)))
     
-    // Get service statistics
+    // Getting service statistics
+
     const serviceStats = services.map(service => {
       const workersInService = workersData.filter(worker => worker.service === service)
       const avgPrice = Math.round(
@@ -30,7 +35,8 @@ export async function GET(request: NextRequest) {
       }
     })
 
-    // Sort by count (most popular services first)
+    // Sorting by count (most popular services first)
+
     serviceStats.sort((a, b) => b.count - a.count)
 
     const { searchParams } = new URL(request.url)

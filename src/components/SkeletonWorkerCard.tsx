@@ -1,4 +1,5 @@
 const SkeletonWorkerCard = () => {
+  
   return (
     <div className="border border-violet-200 rounded-lg overflow-hidden shadow bg-white animate-pulse">
       <div className="w-full h-48 bg-gray-300"></div>
