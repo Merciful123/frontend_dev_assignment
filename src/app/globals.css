@@ -1,1 +1,55 @@
 @import 'tailwindcss';
+
+
+/* Button animation starts */
+.border-btn {
+    position: relative;
+    padding: 12px 30px;
+    background: transparent;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+ }
+
+.border-btn::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7, #fd79a8);
+    background-size: 300% 300%;
+    border-radius: 50px;
+    z-index: -1;
+    animation: gradientRotate 3s ease infinite;
+}
+
+.border-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 48px;
+    z-index: -1;
+}
+
+.border-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+@keyframes gradientRotate {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}

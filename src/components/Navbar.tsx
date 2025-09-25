@@ -61,11 +61,10 @@ const Navbar = () => {
               Hire Now
             </button> */}
             <button
-              className="bg-gradient-to-r from-violet-500 to-violet-200 
-  hover:bg-gradient-to-r hover:from-violet-200 hover:to-violet-500 
+              className="
   text-white px-4 py-2 rounded-md text-lg 
   transition-all duration-500 ease-in-out
-  shadow-lg hover:shadow-xl cursor-pointer"
+  shadow-lg hover:shadow-xl cursor-pointer border-btn"
             >
               Hire Now
             </button>
