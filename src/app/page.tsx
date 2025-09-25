@@ -23,7 +23,7 @@ export default function WorkersPage() {
     <main className="container mx-auto px-4 py-8 bg-violet-50">
       <h1 className="text-3xl font-bold mb-8 text-center">Our Workers</h1>
 
-      <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
         {workersData
           .filter((worker) => worker.pricePerDay > 0)
           .filter((worker) => worker.id !== null)
